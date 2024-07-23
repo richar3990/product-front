@@ -54,15 +54,14 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let producto of productos">
-          <td>{{ producto.orden }}</td>
-          <td>{{ producto.nombre }}</td>
-          <td>{{ producto.descripcion }}</td>
-          <td>{{ producto.precio }}</td>
+        <tr *ngFor="let producto of productos ; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ producto.name }}</td>
+          <td>{{ producto.description }}</td>
+          <td>{{ producto.price }}</td>
           <td class="actions">
-            <button (click)="editarRegistro(producto.orden)">Editar</button>
-            <button (click)="eliminarRegistro(producto.orden)">Eliminar</button>
-            <button (click)="verDetalles(producto.orden)">Detalles</button>
+            <button (click)="editarRegistro(producto.id)">Editar</button>
+            <button (click)="eliminarRegistro(producto.id, producto.name)">Eliminar</button>
           </td>
         </tr>
       </tbody>
