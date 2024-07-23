@@ -5,7 +5,7 @@ import axios, { AxiosInstance } from 'axios';
   providedIn: 'root'
 })
 export class ProductoService {
-  private apiUrl = 'http://localhost:8082/products';
+  private apiUrl = 'http://localhost:8083/products';
   private axiosInstance: AxiosInstance;
 
   constructor() {
